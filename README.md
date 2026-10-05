@@ -9,6 +9,23 @@ The repository is intentionally written as a modular Django application with
 Celery workers. This gives you real enterprise patterns while keeping the
 project understandable for a first professional portfolio application.
 
+## Live interview demo
+
+- **Dashboard:** https://ledger-sync-black.vercel.app
+- **API health:** https://ledgersync-api.onrender.com/api/v1/health/
+- **Source:** https://github.com/nishant233032024/ledger-sync
+- **Sign in:** `demo@example.com` / `Demo12345!`
+
+The public dashboard opens the controlled 2023 scenario: **200 source rows,
+93 matched pairs, and 11 known injected exception flags**. Use the scenario
+selector to compare the compatible baseline and historical 2022/2023 samples.
+The account has read-only Auditor access. The free Render backend may take
+about a minute to wake up after being idle.
+
+The frontend runs on Vercel Hobby, the Python API on Render Free, and persistent
+PostgreSQL on Neon's Free plan through Vercel's marketplace. See
+[`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for hosting and interview details.
+
 ## What you will build
 
 ```text

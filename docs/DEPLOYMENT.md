@@ -4,6 +4,33 @@ The public demo uses **Vercel Hobby** for Next.js, a **Render free Python web
 service** for Django, and **Neon Free** for persistent PostgreSQL. Each provider
 requires your own account. Select the free plans during setup.
 
+## Current published deployment
+
+- Dashboard: <https://ledger-sync-black.vercel.app>
+- API: <https://ledgersync-api.onrender.com/api/v1>
+- Repository: <https://github.com/nishant233032024/ledger-sync>
+- Neon resource: `ledgersync-demo`, **Free**, Oregon (`pdx1`), provisioned through
+  the Vercel marketplace. A separate Neon sign-in was not needed for this setup.
+
+The frontend was published with the Vercel CLI from `frontend/`; its uploaded
+source root is that directory. Render deploys the repository's `main` branch
+from the repository root. Automatic Vercel GitHub deployments require granting
+Vercel access to `nishant233032024/ledger-sync`. Once connected for Git-based
+builds, set the Vercel project's Root Directory to `frontend`.
+
+Verification completed: 15 backend tests, frontend lint/build, production
+dependency audit, Render Blueprint validation, live API checks, and a fresh
+browser session covering sign-in, scenarios, pagination, reference search,
+read-only controls, JWT refresh, and sign-out. The production dependency audit
+reported zero vulnerabilities; build-only development dependencies have
+separate audit findings.
+
+Recheck the published API with:
+
+```bash
+python3 tools/verify_public_demo.py --api-url https://ledgersync-api.onrender.com/api/v1 --frontend-origin https://ledger-sync-black.vercel.app
+```
+
 ## What the public link demonstrates
 
 Sign in with `demo@example.com` / `Demo12345!`. This account is an **Auditor**,
