@@ -12,11 +12,11 @@ requires your own account. Select the free plans during setup.
 - Neon resource: `ledgersync-demo`, **Free**, Oregon (`pdx1`), provisioned through
   the Vercel marketplace. A separate Neon sign-in was not needed for this setup.
 
-The frontend was published with the Vercel CLI from `frontend/`; its uploaded
-source root is that directory. Render deploys the repository's `main` branch
-from the repository root. Automatic Vercel GitHub deployments require granting
-Vercel access to `nishant233032024/ledger-sync`. Once connected for Git-based
-builds, set the Vercel project's Root Directory to `frontend`.
+Vercel is connected to `nishant233032024/ledger-sync` with **Production Branch**
+set to `main`, **Root Directory** set to `frontend`, and the **Next.js** framework.
+Pushes to `main` automatically deploy the frontend to the production dashboard.
+Render also deploys `main` automatically, using the repository root for the API
+and shipped reconciliation fixtures.
 
 Verification completed: 15 backend tests, frontend lint/build, production
 dependency audit, Render Blueprint validation, live API checks, and a fresh

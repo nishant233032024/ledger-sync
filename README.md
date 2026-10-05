@@ -25,6 +25,7 @@ about a minute to wake up after being idle.
 The frontend runs on Vercel Hobby, the Python API on Render Free, and persistent
 PostgreSQL on Neon's Free plan through Vercel's marketplace. See
 [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for hosting and interview details.
+Pushes to `main` automatically deploy the frontend on Vercel and the API on Render.
 
 ## What you will build
 
