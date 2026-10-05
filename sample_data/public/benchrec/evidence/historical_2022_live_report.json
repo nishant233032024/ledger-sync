@@ -1,0 +1,46 @@
+{
+  "run_id": "f88d0651-de7c-4055-bfae-60eb3dc08409",
+  "status": "COMPLETED",
+  "ledger_batch_id": "dca5a8f0-0d0a-4039-b6a0-3c8c69324e63",
+  "bank_batch_id": "744b639a-7da2-468e-8a30-d45d4582a0b3",
+  "policy": {
+    "date_variance_days": 2,
+    "currency_must_match": true,
+    "exact_reference_match": true,
+    "amount_tolerance_percent": "0.0000"
+  },
+  "matched_pairs": 118,
+  "stored_input_sha256": {
+    "ledger": "294ed756672cfbe7053274fd5025e04759765ea4be923712065cb62ee1e30510",
+    "bank": "a32e3a2064dddb0cca5acbfd0616126c2b5d9d9828fc7ca808549e59802e0f23"
+  },
+  "discrepancy_count": 1764,
+  "discrepancy_types": {
+    "UNMATCHED_LEDGER": 882,
+    "UNMATCHED_EXTERNAL": 882
+  },
+  "ledger_ingestion": {
+    "total": 1000,
+    "imported": 1000,
+    "invalid": 0
+  },
+  "bank_ingestion": {
+    "total": 1000,
+    "imported": 1000,
+    "invalid": 0
+  },
+  "evaluation": "CURATED_TRAINING_SAMPLE_NOT_HELD_OUT_BENCHMARK",
+  "supplied_pairs": 1000,
+  "correct_predicted_pairs": 118,
+  "false_predicted_pairs": 0,
+  "pair_precision_percent": 100.0,
+  "pair_recall_percent": 11.8,
+  "false_pair_examples": [],
+  "meaning": "Unmatched/variance flags mean rule exceptions. Publisher labels describe matches, not proven missing funds or fraud.",
+  "scenario": "historical_2022",
+  "input_sha256": {
+    "ledger": "294ed756672cfbe7053274fd5025e04759765ea4be923712065cb62ee1e30510",
+    "bank": "a32e3a2064dddb0cca5acbfd0616126c2b5d9d9828fc7ca808549e59802e0f23"
+  },
+  "fixture_source_account": "demo-benchrec-historical-2022-294ed7a32e3a"
+}

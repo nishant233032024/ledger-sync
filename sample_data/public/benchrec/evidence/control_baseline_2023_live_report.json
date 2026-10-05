@@ -1,0 +1,43 @@
+{
+  "run_id": "889a553b-0023-4985-8001-32ad7222cdf4",
+  "status": "COMPLETED",
+  "ledger_batch_id": "514b6fea-94c5-4632-acbb-200fe550e5d2",
+  "bank_batch_id": "7dcb6a72-2005-49b7-baef-14a27ec23668",
+  "policy": {
+    "date_variance_days": 2,
+    "currency_must_match": true,
+    "exact_reference_match": true,
+    "amount_tolerance_percent": "0.0000"
+  },
+  "matched_pairs": 100,
+  "stored_input_sha256": {
+    "ledger": "b7fb6317c89c48110c039d38d93a245610efb1a7a3808bc58803ed78f91b635a",
+    "bank": "97259bbf451d3f2d45ac3da647f601c613dfd433886b7a5a9b77b215b775183c"
+  },
+  "discrepancy_count": 0,
+  "discrepancy_types": {},
+  "ledger_ingestion": {
+    "total": 100,
+    "imported": 100,
+    "invalid": 0
+  },
+  "bank_ingestion": {
+    "total": 100,
+    "imported": 100,
+    "invalid": 0
+  },
+  "evaluation": "CURATED_TRAINING_SAMPLE_NOT_HELD_OUT_BENCHMARK",
+  "supplied_pairs": 100,
+  "correct_predicted_pairs": 100,
+  "false_predicted_pairs": 0,
+  "pair_precision_percent": 100.0,
+  "pair_recall_percent": 100.0,
+  "false_pair_examples": [],
+  "meaning": "Unmatched/variance flags mean rule exceptions. Publisher labels describe matches, not proven missing funds or fraud.",
+  "scenario": "control_baseline_2023",
+  "input_sha256": {
+    "ledger": "b7fb6317c89c48110c039d38d93a245610efb1a7a3808bc58803ed78f91b635a",
+    "bank": "97259bbf451d3f2d45ac3da647f601c613dfd433886b7a5a9b77b215b775183c"
+  },
+  "fixture_source_account": "demo-benchrec-control-baseline-2023-b7fb6397259b"
+}

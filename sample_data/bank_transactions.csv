@@ -1,0 +1,6 @@
+reference,amount,currency,timestamp,counterparty,direction,description
+INV-1001,1250.00,USD,2026-01-10T12:00:00Z,Acme Inc,CREDIT,Settled invoice
+INV-1002,500.00,USD,2026-01-11T13:00:00Z,Globex Corp,CREDIT,Settled invoice
+INV-1003,874.50,USD,2026-01-12T10:00:00Z,Initech,CREDIT,Gateway fee variance
+INV-9999,75.00,USD,2026-01-14T17:00:00Z,Unknown Customer,CREDIT,Unmatched settlement
+INV-1005,100.00,USD,2026-01-14T18:00:00Z,Wayne Enterprises,CREDIT,Settled invoice

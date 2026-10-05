@@ -1,0 +1,109 @@
+{
+  "archive_sha256": "46d6851a47f1888a7295ac5f7d49295f845b5041ddd18965fef7b79be1b86b4b",
+  "original_members": {
+    "BenchRec_cash_v1.0_eval.csv": {
+      "rows": 69171,
+      "uncompressed_bytes": 25850839,
+      "sha256": "2b1d2f734420d92c12b563d8f9a281608f9a50a8305369ac41913aa39b508bdf",
+      "sides": {
+        "B": 32048,
+        "A": 37123
+      },
+      "value_date_ranges": {
+        "B": {
+          "first": "2022-12-21",
+          "last": "2023-05-31"
+        },
+        "A": {
+          "first": "2022-05-18",
+          "last": "2023-05-31"
+        }
+      }
+    },
+    "BenchRec_cash_v1.0_solution.csv": {
+      "rows": 32048,
+      "uncompressed_bytes": 6715938,
+      "sha256": "1cb0fe95563b2c191fbfafe206e6fb97eb7844a486dbc3a1638c1c7ff2362477",
+      "sides": {
+        "B": 32048
+      },
+      "value_date_ranges": {}
+    },
+    "BenchRec_cash_v1.0_train.csv": {
+      "rows": 149854,
+      "uncompressed_bytes": 78765900,
+      "sha256": "a7d66dc4a2fcf65abc1047d9f60905dfd248bad9db4c34920c3a9c86e6fadefb",
+      "sides": {
+        "B": 68975,
+        "A": 80879
+      },
+      "value_date_ranges": {
+        "B": {
+          "first": "2015-03-08",
+          "last": "2023-03-05"
+        },
+        "A": {
+          "first": "2015-03-08",
+          "last": "2023-03-18"
+        }
+      }
+    },
+    "MatcherByChatGPT_submission.csv": {
+      "rows": 32048,
+      "uncompressed_bytes": 10537973,
+      "sha256": "ca74a5f846f681eb74b0476505d03b0ee2c8a7eb743f83ea990414d3f2fe7a8d",
+      "sides": {
+        "A": 20800,
+        "B": 32048
+      },
+      "value_date_ranges": {}
+    }
+  },
+  "normalized_file_sha256": {
+    "control_baseline_2023_bank.csv": "97259bbf451d3f2d45ac3da647f601c613dfd433886b7a5a9b77b215b775183c",
+    "control_baseline_2023_ledger.csv": "b7fb6317c89c48110c039d38d93a245610efb1a7a3808bc58803ed78f91b635a",
+    "controlled_faults_2023_bank.csv": "4eca8389fd4ad2ed203ed8840acbd6a0c7329acd38ef59b85ff72d7660229eb7",
+    "controlled_faults_2023_ledger.csv": "00b95fcac110b7c5cccd408420a0a37cdf6802f095d17598078ddcf5b44f45ef",
+    "historical_2022_bank.csv": "a32e3a2064dddb0cca5acbfd0616126c2b5d9d9828fc7ca808549e59802e0f23",
+    "historical_2022_ledger.csv": "294ed756672cfbe7053274fd5025e04759765ea4be923712065cb62ee1e30510",
+    "historical_2023_bank.csv": "48a2fb65e1a6618bbc0ca94325f257766b90ec76dd46c2bcfbcc6e146f94a62f",
+    "historical_2023_ledger.csv": "20d462f55bd1de400b2742dd8da0c2400a496ddec49b42a6d7a924aa4ed31ba1"
+  },
+  "historical_training_samples": {
+    "2022": {
+      "publisher_labeled_pairs": 1000,
+      "ledger_rows": 1000,
+      "bank_rows": 1000,
+      "first_value_date": "2022-09-10",
+      "last_value_date": "2022-12-31",
+      "pairs_with_signed_amount_difference": 20,
+      "pairs_with_date_difference": 4,
+      "reference_tokens_agree": 118
+    },
+    "2023": {
+      "publisher_labeled_pairs": 1000,
+      "ledger_rows": 1000,
+      "bank_rows": 1000,
+      "first_value_date": "2023-01-01",
+      "last_value_date": "2023-03-05",
+      "pairs_with_signed_amount_difference": 25,
+      "pairs_with_date_difference": 21,
+      "reference_tokens_agree": 144
+    }
+  },
+  "controlled_lab": {
+    "ledger_rows": 100,
+    "bank_rows": 100,
+    "expected_matches": 93,
+    "expected_discrepancy_count": 11,
+    "expected_discrepancy_types": {
+      "UNMATCHED_LEDGER": 1,
+      "AMOUNT_VARIANCE": 1,
+      "DATE_VARIANCE": 1,
+      "CURRENCY_MISMATCH": 1,
+      "DUPLICATE_TRANSACTION": 2,
+      "UNMATCHED_EXTERNAL": 4,
+      "AMBIGUOUS_MATCH": 1
+    }
+  }
+}

@@ -1,0 +1,6 @@
+reference,amount,currency,timestamp,counterparty,direction,description
+INV-1001,1250.00,USD,2026-01-10T10:00:00Z,Acme Inc,CREDIT,January invoice
+INV-1002,500.00,USD,2026-01-11T11:30:00Z,Globex Corp,CREDIT,January invoice
+INV-1003,875.50,USD,2026-01-12T09:15:00Z,Initech,CREDIT,January invoice
+INV-1004,250.00,USD,2026-01-13T14:45:00Z,Umbrella LLC,CREDIT,January invoice
+INV-1005,100.00,USD,2026-01-14T16:20:00Z,Wayne Enterprises,CREDIT,January invoice

@@ -1,0 +1,1 @@
+"""LedgerSync domain application."""

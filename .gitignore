@@ -1,0 +1,38 @@
+# Python generated files.
+__pycache__/
+*.py[cod]
+*.pyo
+*.part
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Local configuration and secrets.
+.env
+.env.*
+!.env.example
+.vercel/
+.venv/
+venv/
+
+# Django generated files and local uploads.
+db.sqlite3
+media/
+staticfiles/
+
+# Node and Next.js generated files.
+node_modules/
+.next/
+*.tsbuildinfo
+out/
+npm-debug.log*
+
+# IDE files.
+.vscode/
+.idea/
+*.swp
+
+# OS files.
+.DS_Store
+Thumbs.db

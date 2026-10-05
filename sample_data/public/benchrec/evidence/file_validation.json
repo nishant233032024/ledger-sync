@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "files": {
+    "historical_2022_ledger.csv": {
+      "rows": 1000,
+      "source_preservation": "PASS",
+      "answer_leakage": "NONE"
+    },
+    "historical_2022_bank.csv": {
+      "rows": 1000,
+      "source_preservation": "PASS",
+      "answer_leakage": "NONE"
+    },
+    "historical_2023_ledger.csv": {
+      "rows": 1000,
+      "source_preservation": "PASS",
+      "answer_leakage": "NONE"
+    },
+    "historical_2023_bank.csv": {
+      "rows": 1000,
+      "source_preservation": "PASS",
+      "answer_leakage": "NONE"
+    },
+    "control_baseline_2023_ledger.csv": {
+      "rows": 100,
+      "source_preservation": "PASS",
+      "answer_leakage": "NONE"
+    },
+    "control_baseline_2023_bank.csv": {
+      "rows": 100,
+      "source_preservation": "PASS",
+      "answer_leakage": "NONE"
+    }
+  },
+  "controlled_lab": "Mutations are explicit; originals remain separate."
+}

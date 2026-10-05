@@ -1,0 +1,3 @@
+# Evidence hashes refer to the original CSV bytes, including line endings.
+*.csv -text whitespace=cr-at-eol
+*.zip binary

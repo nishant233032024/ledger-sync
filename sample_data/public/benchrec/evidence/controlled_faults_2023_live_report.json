@@ -1,0 +1,52 @@
+{
+  "run_id": "558fdccc-b218-4be8-a57f-0778b7a61631",
+  "status": "COMPLETED",
+  "ledger_batch_id": "d3d20099-430f-4424-a960-cab0a23083a5",
+  "bank_batch_id": "b5c95064-53fc-4ec8-a98f-b80b2259307b",
+  "policy": {
+    "date_variance_days": 2,
+    "currency_must_match": true,
+    "exact_reference_match": true,
+    "amount_tolerance_percent": "0.0000"
+  },
+  "matched_pairs": 93,
+  "stored_input_sha256": {
+    "ledger": "00b95fcac110b7c5cccd408420a0a37cdf6802f095d17598078ddcf5b44f45ef",
+    "bank": "4eca8389fd4ad2ed203ed8840acbd6a0c7329acd38ef59b85ff72d7660229eb7"
+  },
+  "discrepancy_count": 11,
+  "discrepancy_types": {
+    "AMBIGUOUS_MATCH": 1,
+    "AMOUNT_VARIANCE": 1,
+    "DATE_VARIANCE": 1,
+    "CURRENCY_MISMATCH": 1,
+    "DUPLICATE_TRANSACTION": 2,
+    "UNMATCHED_LEDGER": 1,
+    "UNMATCHED_EXTERNAL": 4
+  },
+  "ledger_ingestion": {
+    "total": 100,
+    "imported": 100,
+    "invalid": 0
+  },
+  "bank_ingestion": {
+    "total": 100,
+    "imported": 100,
+    "invalid": 0
+  },
+  "evaluation": "CONTROLLED_FAULT_INJECTION",
+  "expected_matches": 93,
+  "expected_discrepancy_count": 11,
+  "flags_exactly_equal_by_source_id": true,
+  "match_count_equal": true,
+  "matched_source_pairs_exactly_equal": true,
+  "match_values_valid": true,
+  "verification": "PASS",
+  "meaning": "Known injected defects; not original bank errors.",
+  "scenario": "controlled_faults_2023",
+  "input_sha256": {
+    "ledger": "00b95fcac110b7c5cccd408420a0a37cdf6802f095d17598078ddcf5b44f45ef",
+    "bank": "4eca8389fd4ad2ed203ed8840acbd6a0c7329acd38ef59b85ff72d7660229eb7"
+  },
+  "fixture_source_account": "demo-benchrec-controlled-faults-2023-00b95f4eca83"
+}

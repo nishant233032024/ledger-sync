@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "LedgerSync API",
+    "description": "Copy-paste API workflow for the LedgerSync capstone.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8000/api/v1" },
+    { "key": "access_token", "value": "" },
+    { "key": "batch_id", "value": "" },
+    { "key": "external_batch_id", "value": "" },
+    { "key": "discrepancy_id", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Obtain JWT",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"username\": \"admin@example.com\",\n  \"password\": \"Admin12345!\"\n}" },
+        "url": "{{base_url}}/auth/token/"
+      }
+    },
+    {
+      "name": "Upload ERP CSV",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }],
+        "body": { "mode": "formdata", "formdata": [
+          { "key": "file", "type": "file", "src": "sample_data/erp_transactions.csv" },
+          { "key": "source_type", "value": "ERP", "type": "text" }
+        ] },
+        "url": "{{base_url}}/batches/upload/"
+      }
+    },
+    {
+      "name": "Upload bank CSV",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }],
+        "body": { "mode": "formdata", "formdata": [
+          { "key": "file", "type": "file", "src": "sample_data/bank_transactions.csv" },
+          { "key": "source_type", "value": "BANK", "type": "text" }
+        ] },
+        "url": "{{base_url}}/batches/upload/"
+      }
+    },
+    {
+      "name": "List batches",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }], "url": "{{base_url}}/batches/" }
+    },
+    {
+      "name": "Batch status",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }], "url": "{{base_url}}/batches/{{batch_id}}/status/" }
+    },
+    {
+      "name": "Start reconciliation",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"ledger_batch_id\": \"{{batch_id}}\",\n  \"external_batch_id\": \"{{external_batch_id}}\"\n}" },
+        "url": "{{base_url}}/reconciliation/runs/"
+      }
+    },
+    {
+      "name": "List transactions",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }], "url": "{{base_url}}/transactions/?page_size=50&status=MATCHED" }
+    },
+    {
+      "name": "List open discrepancies",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }], "url": "{{base_url}}/discrepancies/?status=OPEN" }
+    },
+    {
+      "name": "Resolve discrepancy",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{access_token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"resolution\": \"ACCEPTED_VARIANCE\",\n  \"note\": \"Approved after finance review of the settlement fee.\"\n}" },
+        "url": "{{base_url}}/discrepancies/{{discrepancy_id}}/resolve/"
+      }
+    }
+  ]
+}

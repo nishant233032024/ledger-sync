@@ -1,0 +1,30 @@
+# Deploy this Blueprint from the GitHub repository root.
+# Neon provides persistent PostgreSQL; no expiring Render database is created.
+services:
+  - type: web
+    name: ledgersync-api
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r backend/requirements/base.txt && python backend/manage.py collectstatic --noinput
+    startCommand: python backend/deploy.py
+    healthCheckPath: /api/v1/health/
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.14
+      - key: DJANGO_DEBUG
+        value: "0"
+      - key: LEDGERSYNC_PUBLIC_DEMO
+        value: "1"
+      - key: DJANGO_TRUST_PROXY
+        value: "1"
+      - key: DJANGO_SECRET_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DJANGO_CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: DJANGO_CSRF_TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_CONN_MAX_AGE
+        value: "0"
